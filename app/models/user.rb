@@ -7,6 +7,9 @@ class User < ApplicationRecord
 
   before_validation :strip_extra_spaces
 
+  has_secured_password
+  validates :password, presence: true, length: { minimum: 8}
+
   private
 
   def strip_extra_spaces
