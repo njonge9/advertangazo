@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
   root "feed#show"
-<<<<<<< HEAD
 
-  get "sign_up", to: "users#new"
-  post "sign_up", to: "users#create"
-=======
   devise_for :users
->>>>>>> users-and-sign-ups
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
