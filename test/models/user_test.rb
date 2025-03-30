@@ -1,6 +1,7 @@
 require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
+<<<<<<< HEAD
   test "requires a name" do
     @user = User.new(name: "", email: "john@example.com", password: "password")
     assert_not @user.valid?
@@ -54,4 +55,9 @@ class UserTest < ActiveSupport::TestCase
     @user.password = "a" * max_length
     assert_not @user.valid?
   end
+=======
+  # test "the truth" do
+  #   assert true
+  # end
+>>>>>>> users-and-sign-ups
 end

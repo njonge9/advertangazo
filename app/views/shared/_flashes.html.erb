@@ -1,7 +1,15 @@
 <div class="container is-fluid" data-turbo-cache="false">
+<<<<<<< HEAD
     <% flash.each do |level, message| %>
         <%= tag.div class:"notification is-#{level} is-light has-text-centered mt-4" do%>
             <%= message %>
         <% end %>
     <% end %>
+=======
+  <% flash.each do |level, message| %>
+    <div class="notification is-<%= level %> is-light has-text-centered mt-4">
+      <%= message %>
+    </div>
+  <% end %>
+>>>>>>> users-and-sign-ups
 </div>
