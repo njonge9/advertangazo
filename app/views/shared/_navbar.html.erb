@@ -13,15 +13,27 @@
     <navbar-menu class="navbar-menu">
         <div class="navbar-start">
             <%= link_to "Create Ad", "#", class:"navbar-item"%>
+            <%= link_to "Messages", "#", class: "navbar-item" if user_signed_in? %>
         </div>
 
         <div class="navbar-end">
+            <%= tag.div class:"navbar-item has-dropdown is-hoverable mr-4" do%>
+                <%= link_to current_user.name, "#", class: "navbar-link" %>
+                <div class="navbar-dropdown is-right">
+                    <%= link_to "Profile", edit_user_registration_path, class: "navbar-item" %>
+                    <%= link_to "My Ads", "#", class: "navbar-item"%>
+                    <%= link_to "Saved Ads", "#", class: "navbar-item"%>
+                    <hr class="navbar-divider">
+                    <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "navbar-item" %>
+                </div>
+            <% end if user_signed_in? %>
+
             <%= tag.div class:"navbar-item" do%>
                 <div class="buttons">
                     <%= link_to "Sign Up", new_user_registration_path, class:"button is-primary"%>
                     <%= link_to "Log In", new_user_session_path, class:"button is-light"%>
                 </div>
-            <% end %>
+            <% end unless user_signed_in? %>
         </div>
     </navbar-menu>
 </nav>
