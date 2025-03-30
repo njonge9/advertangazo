@@ -151,7 +151,7 @@ GEM
       zeitwerk (>= 2.6.18, < 3.0)
     language_server-protocol (3.17.0.4)
     lint_roller (1.1.0)
-    logger (1.6.6)
+    logger (1.7.0)
     loofah (2.24.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -259,7 +259,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.2.1)
-    rdoc (6.13.0)
+    rdoc (6.13.1)
       psych (>= 4.0.0)
     regexp_parser (2.10.0)
     reline (0.6.0)
@@ -268,7 +268,7 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.4.1)
-    rubocop (1.75.0)
+    rubocop (1.75.1)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -372,7 +372,6 @@ PLATFORMS
   arm-linux-musl
   arm64-darwin
   x86_64-darwin
-  x86_64-linux
   x86_64-linux-gnu
   x86_64-linux-musl
 
@@ -383,10 +382,7 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
-<<<<<<< HEAD
-=======
   devise (~> 4.9)
->>>>>>> users-and-sign-ups
   i18n-debug
   jbuilder
   jsbundling-rails
@@ -407,4 +403,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   2.5.16
+   2.6.6
